@@ -20,15 +20,16 @@ class LoginScreen extends StatelessWidget {
       return await showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title:  const Text('هل تود الخروج؟', textAlign:TextAlign.center ,),
+            title:  const Text('Dukan', textAlign:TextAlign.center ,),
+            content: const Text('Do you want to Exit?', textAlign:TextAlign.center ,),
             actions: [
               TextButton(
-                child: const Text('لا'),
+                child: const Text('Cancel'),
                 onPressed: () =>
                     Navigator.of(context).pop(false),
               ),
               TextButton(
-                  child: const Text('نعم'),
+                  child: const Text('OK'),
                   onPressed: () {
                     exit(0);
                   }

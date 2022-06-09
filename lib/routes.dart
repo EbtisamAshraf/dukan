@@ -13,9 +13,9 @@ import 'data/model/arguments_model/category_details_arguments_model.dart';
 
 
 class Routes {
-  static const String splashRoute = "/splash";
+  static const String splashRoute = "/";
   static const String onBoardingRoute = "/onBoarding";
-  static const String mainScreenRoute = "/";
+  static const String mainScreenRoute = "/main";
   static const String loginScreenRoute = "/login";
   static const String registerScreenRoute = "/register";
   static const String productDetailsScreenRoute = "/productDetails";

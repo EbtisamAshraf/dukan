@@ -22,7 +22,7 @@ class _CustomIndicatorState extends State<CustomIndicator> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
             children: List.generate(
@@ -48,7 +48,7 @@ class ActiveDot extends StatelessWidget {
         width: 25,
         height: 8,
         decoration: BoxDecoration(
-          color: ColorsManager.white,
+          color: ColorsManager.primaryColor,
           borderRadius: BorderRadius.circular(5),
         ),
       ),
@@ -67,7 +67,7 @@ class InactiveDot extends StatelessWidget {
         width: 8,
         height: 8,
         decoration: BoxDecoration(
-          color: ColorsManager.gray.withOpacity(0.5),
+          color: ColorsManager.primaryColor.withOpacity(0.5),
           borderRadius: BorderRadius.circular(5),
         ),
       ),

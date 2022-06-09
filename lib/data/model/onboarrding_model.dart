@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
 
 class OnBoardingModel {
-  Widget title;
+  String title;
   String body;
   String image;
 

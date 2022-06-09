@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
             localizationsDelegates: context.localizationDelegates,
             supportedLocales: context.supportedLocales,
             locale: context.locale,
-            initialRoute: Routes.mainScreenRoute,
+            initialRoute: Routes.splashRoute,
             onGenerateRoute: RouteGenerator.getRoute,
             title: 'Dukan',
             theme: ThemeManager.lightTheme(),

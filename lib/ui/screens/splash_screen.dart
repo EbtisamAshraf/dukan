@@ -21,11 +21,11 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   startDelay() {
-    timer = Timer(const Duration(seconds: 3), nextScreen);
+    timer = Timer(const Duration(seconds: 5), nextScreen);
   }
 
   nextScreen() {
-   // bool? isSkip =  false;
+    // bool? isSkip =  false;
    bool? isSkip =  SharedPref.getBoolData(key: 'isSkip') ; // todo changeIsSkip in nextButton
    String? token = SharedPref.getStringData(key: 'token');
 
@@ -52,7 +52,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(ImageAssets.splash), fit: BoxFit.cover)),
+                image: AssetImage(ImageAssets.splash), fit: BoxFit.contain)),
       ),
     );
   }

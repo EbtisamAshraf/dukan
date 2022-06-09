@@ -1,5 +1,6 @@
 import 'package:dukan/data/model/onboarrding_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 
 
@@ -20,8 +21,8 @@ final  List<OnBoardingModel> listOnBoardingSlider;
         SizedBox(
             height:
             MediaQuery.of(context).size.height *
-                0.4,
-            child: Image.asset(
+                0.5,
+            child: SvgPicture.asset(
               listOnBoardingSlider[index].image,
             )),
         const SizedBox(
@@ -30,7 +31,7 @@ final  List<OnBoardingModel> listOnBoardingSlider;
         Padding(
           padding: const EdgeInsets.symmetric(
               horizontal: 20.0),
-          child: listOnBoardingSlider[index].title,
+          child: Text(listOnBoardingSlider[index].title,style: textTheme.headlineMedium),
         ),
         const SizedBox(
           height: 15,
@@ -40,7 +41,7 @@ final  List<OnBoardingModel> listOnBoardingSlider;
               horizontal: 20.0),
           child: Text(
             listOnBoardingSlider[index].body,
-            style: textTheme.bodyText2!
+            style: textTheme.displayMedium!
                 .copyWith(height: 2),
             textAlign: TextAlign.center,
           ),

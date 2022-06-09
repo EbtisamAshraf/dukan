@@ -1,8 +1,8 @@
+import 'dart:io';
 import 'package:dukan/constants/design_constants/colors_manager.dart';
 import 'package:dukan/ui/screens/home_screen.dart';
 import 'package:dukan/ui/screens/search_products_screen.dart';
 import 'package:flutter/material.dart';
-import 'favorites_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -26,10 +26,33 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-
-    return Scaffold(
-      body:screens[currentIndexScreen],
-      bottomNavigationBar:bottomNavigationBarIcons() ,
+    Future <bool> onBackPressed () async{
+      return await showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title:  const Text('Dukan', textAlign:TextAlign.center ,),
+            content: const Text('Do you want to Exit?', textAlign:TextAlign.center ,),
+            actions: [
+              TextButton(
+                child: const Text('Cancel'),
+                onPressed: () =>
+                    Navigator.of(context).pop(false),
+              ),
+              TextButton(
+                  child: const Text('OK'),
+                  onPressed: () {
+                    exit(0);
+                  }
+              ),
+            ],
+          ));
+    }
+    return WillPopScope(
+      onWillPop: onBackPressed,
+      child: Scaffold(
+        body:screens[currentIndexScreen],
+        bottomNavigationBar:bottomNavigationBarIcons() ,
+      ),
     );
   }
 

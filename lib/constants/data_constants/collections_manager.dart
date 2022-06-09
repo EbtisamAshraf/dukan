@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 import '../../data/model/onboarrding_model.dart';
 import 'assets_manager.dart';
@@ -11,12 +9,16 @@ class CollectionsManager {
 
   static List<OnBoardingModel> onBoardingList = [
     OnBoardingModel(
-        image: ImageAssets.onBoardingImage2,
-        title: const Text('welcome \n to'),
-        body: 'It\'d be great'),
-    OnBoardingModel(
         image: ImageAssets.onBoardingImage1,
-        title: const Text('welcome \n to'),
-        body: 'It\'d be great'),
+        title: 'Discover the best products',
+        body: 'Browse products now on the application\n and get your favorite product'),
+    OnBoardingModel(
+        image: ImageAssets.onBoardingImage2,
+        title: 'Choose your favorite product',
+        body: 'Choose the product you want to buy and\n start the buying process with ease'),
+    OnBoardingModel(
+        image: ImageAssets.onBoardingImage3,
+        title: 'Confirm your purchase',
+        body: 'Confirm the purchase of your product\n and choose the best delivery ways'),
   ];
 }
